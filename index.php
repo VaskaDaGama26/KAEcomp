@@ -148,22 +148,19 @@ session_start();
     <script src="script/jquery.min.js"></script>
     <script src="script/bootstrap.bundle.min.js"></script>
     <script>
-        // Получаем все ссылки навигации
         const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
     
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
-                // Закрываем бургер-меню
                 const navbarCollapse = document.getElementById('navbarNav');
                 const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-                    toggle: false // Не переключаем состояние
+                    toggle: false 
                 });
-                bsCollapse.hide(); // Закрываем меню
+                bsCollapse.hide(); 
             });
         });
 
 
-        // Пример новостей
         const newsSlides = [
             {
                 title: "В ОАЭ продлили программу визовой амнистии до конца года",
@@ -201,7 +198,6 @@ session_start();
             showSlide(currentSlide);
         }
 
-        // Показать первый слайд при загрузке страницы
         document.addEventListener("DOMContentLoaded", function() {
             showSlide(currentSlide);
         });
